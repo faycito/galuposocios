@@ -1,0 +1,14 @@
+.profileContainer{
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+.profileContainer .MuiTypography-h6{
+    text-align: center;
+    width: 100%;
+}
+
+.MuiAppBar-colorPrimary{
+    background-color: #f06292 !important;
+} 

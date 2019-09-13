@@ -1,0 +1,49 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(228, 67, 134) 0%, rgb(122, 16, 179) 100%);
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+}
+h1{
+    margin:0;
+    text-align: center;
+    color:white;
+    font-family: 'Roboto'
+
+}
+
+.alice-carousel__wrapper{
+    height: 350px;
+}
+
+.button, .button a{
+    color:white !important;
+    border-color: white !important;
+    text-decoration: none;
+}
+
+.swiper-content{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column
+}
+
+.swiper-content img{
+    height: 150px;
+}
+
+.buttonctn{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+.alice-carousel__stage-item h3{
+    color: white;
+}
