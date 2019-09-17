@@ -57,7 +57,7 @@ export default class RegistroPage extends Component {
                     <TextField
                         id="correo"
                         label="Correo electrónico"
-                        value={this.state.name}
+                        value={this.state.email}
                         onChange={(event) => this.setState({email:event.target.value})}
                     />
                     <TextField
@@ -139,7 +139,7 @@ export default class RegistroPage extends Component {
                                     label="longitud"
                                     type="number"
                                     value={this.state.acadAddLng}
-                                    onChange={(e) => this.setState({acadAddLat:e.target.value})}
+                                    onChange={(e) => this.setState({acadAddLng:e.target.value})}
                                 />
                             </div>
                             <TextField
