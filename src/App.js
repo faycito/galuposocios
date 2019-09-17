@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route,  } from "react-router-dom";
 import Home from './components/home'
 import Registro from './components/registro'
 import Profile from './components/profile'

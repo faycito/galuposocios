@@ -34,18 +34,21 @@ export default class HomePage extends Component {
                         <h3>Gestionar tus asistencias</h3>
                         <img
                             src={schedule}
+                            alt="horario"
                         />
                     </div>
                     <div className="swiper-content">
                         <h3>Ser más Vistos</h3> 
                         <img
                             src={schedule}
+                            alt="vistos"
                         />
                     </div>
                     <div className="swiper-content">
                         <h3>Anunciar tus Eventos</h3> 
                         <img
                             src={schedule}
+                            alt="eventos"
                         />
                     </div>
                 </AliceCarousel>
