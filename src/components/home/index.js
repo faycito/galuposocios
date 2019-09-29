@@ -54,7 +54,7 @@ export default class HomePage extends Component {
                 </AliceCarousel>
                 <div className="buttonctn">
                     <Button variant="outlined" className="button">
-                        <Link to="/registro">Continuar</Link>
+                        <Link to="/login">Continuar</Link>
                     </Button>
                 </div>
             </div>

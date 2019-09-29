@@ -17,6 +17,7 @@
     margin:0;
     font-weight: 300;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .containerRegister .MuiFormLabel-root, .containerRegister .MuiInputBase-input{
@@ -80,4 +81,11 @@
     width: 80%;
 }
 
-#lat-long-acad-reg{}
+.back-icon-reg {
+    position: absolute;
+    top:1.5em;
+}
+.back-icon-reg i{
+    color: white;
+    font-size: 25px;
+}

@@ -1,0 +1,48 @@
+.login-ctn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginRegister .MuiFormLabel-root, .loginRegister .MuiInputBase-input{
+    color:white;
+}
+
+.loginRegister .MuiFormControl-root{
+    min-width: 300px;
+    max-width: 500px;
+    color:white !important;
+    margin-bottom: 20px;
+}
+.loginRegister .MuiInput-underline:before, .loginRegister .MuiInput-underline:after{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.42)
+}
+
+.loginRegister .MuiInput-underline:hover:not(.Mui-disabled):before{
+    border-bottom: 1px solid white;
+}
+
+.login-form{
+    display: grid;
+}
+
+.register-btn{
+    margin-bottom: 35px !important;
+}
+
+.register-btn a{
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+}
+
+.icon-reg{
+    background-color: white;
+    padding:16px;
+    width: 60px;
+    height: 63px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 12px #FFFFFF88;
+    margin-bottom: 25px;
+}
+

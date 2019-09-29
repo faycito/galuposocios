@@ -12,6 +12,7 @@ import Button from '@material-ui/core/Button';
 
 
 
+
 export default class RegistroPage extends Component {
     state = {
         name:'',
@@ -37,16 +38,36 @@ export default class RegistroPage extends Component {
         socioCode:''
     }
 
+    saveData = () => {
+        let tabs = [];
+        const {academia, socio, profesor} = this.state
+        academia && tabs.push('academia')
+        socio && tabs.push('tienda')
+        profesor && tabs.push('profesor')
+        
+        console.log(JSON.stringify(tabs))
+        localStorage.setItem('tabs', JSON.stringify(tabs));
+    }
+
      handleChange(event) {
          console.log(event)
 
-            this.setState({value: event.target.value})
+
         }
 
     render() {
         return (
             <div className="containerRegister">
-                <h3>Registro</h3>
+                <div className="back-icon-reg">
+                    <Button >
+                        <Link to="/login">
+                            <i className="material-icons">
+                                keyboard_backspace
+                            </i>
+                        </Link>
+                    </Button>
+                </div>
+                    <h3>Registro</h3>
                 <form className="registerForm">
                     <TextField
                         id="nombre"
@@ -89,7 +110,7 @@ export default class RegistroPage extends Component {
                                         this.setState({socio:e.target.checked})
                                     }} value="socio" />
                                     }
-                                    label="Socio"
+                                    label="Tienda"
                                 />
                             </FormGroup>
                         </FormControl>
@@ -200,10 +221,10 @@ export default class RegistroPage extends Component {
                     {
                         this.state.socio &&
                         <div className="form-reg">
-                            <h3>Socio</h3>
+                            <h3>Tienda</h3>
                             <TextField
                                 id="socio-name"
-                                label="Nombre de socio"
+                                label="Nombre de tienda"
                                 type="text"
                                 
                                 value={this.state.socioName}
@@ -211,7 +232,7 @@ export default class RegistroPage extends Component {
                             />  
                             <TextField
                                 id="socio-code"
-                                label="código de socio"
+                                label="Dirección de tienda"
                                 type="text"
                                 
                                 value={this.state.socioCode}
@@ -219,12 +240,14 @@ export default class RegistroPage extends Component {
                             />  
                         </div>
                     }
-                    <Button variant="outlined" className="button">
+                    <Button variant="outlined" className="button" >
                                 <Link to={{pathname:"/profile", state:{
                                     acadName:this.state.academia ? this.state.academiaName : null,
                                     profName: this.state.profesor ? this.state.profName : null,
 
-                                }}}>Finalizar</Link>
+                                }}}
+                                onClick={this.saveData}
+                                >Finalizar</Link>
                             </Button>
                 </form>
             </div>
