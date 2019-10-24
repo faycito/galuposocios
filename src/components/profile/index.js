@@ -9,6 +9,7 @@ import Tab from '@material-ui/core/Tab';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import IconButton from '@material-ui/core/IconButton';
+import { Link } from 'react-router-dom'
 
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 export default class Profile extends Component {
@@ -66,8 +67,17 @@ export default class Profile extends Component {
             open={openMenu}
             onClose={this.handleClose}
           >
-            <MenuItem onClick={this.handleClose}>Ver eventos</MenuItem>
-            <MenuItem onClick={this.handleClose}>Ver asistencias</MenuItem>
+            <MenuItem onClick={this.handleClose}>
+              <Link to="/eventos">
+                Mis eventos
+              </Link>
+            </MenuItem>
+            <MenuItem onClick={this.handleClose}>Mis asistencias</MenuItem>
+            <MenuItem onClick={this.handleClose}>
+              <Link to="/login">
+                Cerrar Sesion
+              </Link>
+            </MenuItem>
           </Menu>
         </AppBar>
         {

@@ -1,0 +1,42 @@
+.events-container{
+    padding:16px;
+}
+
+.galupo-Card{
+    max-width: 400px;
+    max-height: 300px;
+    border: 1px solid #e91e63;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 12px #10202744;
+    margin:12px;
+}
+
+.card-title-banner{
+    position: absolute;
+    background-color: #2e2e2eDD;
+    padding: 6px 6px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.card-title-banner label{
+    color:#e91e63;
+}
+
+.galupo-card-image{
+    width: 100%;
+}
+
+.galupo-card-description{
+    padding: 4px 10px;
+}
+
+.galupo-card-container{
+    position: relative;
+    box-sizing: border-box;
+}
+
+.galupo-list{
+    display: flex;
+    flex-wrap: wrap;
+}

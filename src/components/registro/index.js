@@ -85,7 +85,7 @@ export default class RegistroPage extends Component {
                         id="password"
                         label="Contraseña"
                         type="password"
-                        value={this.state.name}
+                        value={this.state.password}
                         onChange={(event) => this.setState({password:event.target.value})}
                     />
                     <div className="radiobtn">
@@ -130,8 +130,13 @@ export default class RegistroPage extends Component {
                                 id="RUC"
                                 label="RUC"
                                 type="number"
+                                maxLength={11}
                                 value={this.state.academiaRuc}
-                                onChange={(e) => this.setState({academiaRuc:e.target.value})}
+                                onChange={(e) => {
+                                    if(e.target.value.length < 12){
+                                        this.setState({academiaRuc:e.target.value})
+                                    }
+                                }}
                             />
                             <TextField
                                 id="gerenteGAcademia"

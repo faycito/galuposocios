@@ -29,6 +29,7 @@
     max-width: 100vw;
     min-height: 80px;
     padding: 24px 0;
+    position: relative;
     box-sizing: border-box;
     margin-bottom: 2em;
 }
@@ -51,4 +52,11 @@
 
 .MuiIconButton-root .MuiSvgIcon-root{
     color:white;
+}
+
+.MuiFab-secondary{
+    position: absolute !important;
+    background-color: #f50057;
+    bottom:0;
+    transform: translate(50px,-20px);
 }

@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import Fab from '@material-ui/core/Fab';
+import EditIcon from '@material-ui/icons/Edit';
+import './style.css'
+
+
 
 export default class OneType extends Component {
 
@@ -18,6 +23,9 @@ export default class OneType extends Component {
                     <div className="image-profile">
                         {String(type)[0].toUpperCase()}
                     </div>
+                        <Fab color="secondary" aria-label="edit">
+                            <EditIcon/>
+                        </Fab>
                 </div>
                 <div className="info-ctn">
                     <h3>Nombre {type === 'profesor' ? 'del' : 'de la'} {type}</h3>
