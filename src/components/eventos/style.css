@@ -1,5 +1,9 @@
 .events-container{
     padding:16px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: all .3s;
 }
 
 .galupo-Card{
@@ -39,4 +43,63 @@
 .galupo-list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.create-event-button{
+    width: 80vw;
+    padding:16px !important;
+    box-sizing: border-box !important;
+    border:3px dashed #a4a4a4 !important;
+}
+.create-event-button label{
+    margin:0 8px; 
+    color:#a4a4a4
+}
+
+.create-event-button label:nth-child(1){
+    color:#00e676;
+    font-size: 1.5em;
+}
+
+.material-icons{
+    color: white;
+    text-decoration: none;
+    align-self: center;
+    display: flex;
+}
+
+.MuiButtonBase-root a{
+    text-decoration: none;
+}
+
+.MuiLink-underlineNone{
+    underline: "none";
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+.newEvent-container{
+    display: flex;
+    flex:1;
+    padding:16px;
+    box-sizing: border-box;
+}
+
+.MuiFormLabel-root.Mui-focused{
+    color:blue !important;
+}
+
+.newEventForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.newEventForm .MuiTextField-root {
+    margin:9px;
 }

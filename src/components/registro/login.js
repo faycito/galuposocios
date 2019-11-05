@@ -46,7 +46,10 @@ export default class LoginPage extends Component {
                         <Link to="/registro">¿No tienes cuenta? Registrate aquí</Link>
                     </Button>
                     <div className="buttonctn">
-                        <Button variant="outlined" className="button">
+                        <Button variant="outlined" className="button" onClick={() => {
+                            let events = [];
+                            localStorage.setItem('events', JSON.stringify(events));
+                        }}>
                             <Link to="/profile">Ingresar</Link>
                         </Button>
                     </div>

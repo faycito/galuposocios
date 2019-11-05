@@ -14,6 +14,8 @@ import Button from '@material-ui/core/Button';
 
 
 export default class RegistroPage extends Component {
+   
+    
     state = {
         name:'',
         email:'',
@@ -54,6 +56,8 @@ export default class RegistroPage extends Component {
 
 
         }
+
+
 
     render() {
         return (

@@ -11,14 +11,12 @@ import './style.css';
 
 export default class EventosPage extends Component {
 
-    galupoEvents = [1,2,3,4,5,6,7,8,9,10,11]
-
-    _renderCard = () => {
+    _renderCard = (element, index) => {
         return (
-            <div className="galupo-Card">
+            <div className="galupo-Card" key={`eventObj + ${index}`}>
                 <div className="galupo-card-container">
                     <div className="card-title-banner">
-                        <label>Clases de baile de salsa</label>
+                        <label>{typeof element === 'object' ? element.name : 'Clases de baile de salsa'}</label>
                     </div>
                     <img
                         src="https://www.goandance.com/es/media/images-manager/Blog/Mujeres-bailando-en-escuela-de-baile.jpg"
@@ -36,9 +34,20 @@ export default class EventosPage extends Component {
     constructor(props){
         super(props);
         this.state={
-
+            galupoEvents : [1,2,3,4,5,6,7,8,9,10,11]
         }
     }
+
+    componentDidMount(){
+        console.log("hello world")
+        let events = JSON.parse(localStorage.getItem('events'));
+        let arrAux = this.state.galupoEvents
+        events.map((element, index) => {
+            return arrAux.unshift(element)
+        })
+        this.setState({galupoEvents: arrAux})
+    }
+
     render() {
         return (
             <div>
@@ -57,11 +66,19 @@ export default class EventosPage extends Component {
                     </Toolbar>
                 </AppBar>
                 <div className="events-container">
+                    <div style={{margin:"10px"}}>
+                        <Link to="/nuevoEvento" underline="none">
+                            <Button className="create-event-button" underline="none">
+                                <label underline="none">+</label>
+                                <label underline="none">Crea un nuevo evento</label>
+                            </Button>
+                        </Link>
+                    </div>
                     <div className="galupo-list">
                         {
-                            this.galupoEvents.map((element, index) => {
-                                return this._renderCard()
-                            }) 
+                            this.state.galupoEvents.map((element, index) => {
+                                return this._renderCard(element, index)
+                            })
                         }
                     </div>
                 </div>

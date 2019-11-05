@@ -6,6 +6,7 @@ import Registro from './components/registro'
 import Profile from './components/profile'
 import Eventos from './components/eventos'
 import LoginPage from './components/registro/login'
+import NewEvent from './components/eventos/newEvent'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/registro" component={Registro} />
       <Route path="/profile" component={Profile} />
       <Route path="/eventos" component={Eventos} />
+      <Route path="/nuevoEvento" component={NewEvent} />
   </Router>
   );
 }
